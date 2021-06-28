@@ -2,9 +2,49 @@
 
 ## Introduction
 
-```sh
-In 2021 during three months Nigerian Car insurance company held a competion in African data science competition platform called `Zindi`. In this competition the organizer wanted to know _wheter or not a client will submit a vehicle insurance claim in the next 3 months_
-```
+
+ 
+
+| Title | Text |
+| ------ | ------ |
+| Intro | In 2021 during three months, Nigerian car insurance company held a competition in African data science competition platform called `Zindi`. In this competition the organizer wanted to know _wheter or not a client will submit a vehicle insurance claim in the next 3 months_. In this competition 600+ competitors participated. |
+| Data | The dataset consisted of Train == 12000, Test == 1200, Sample_Submition, Nigerian_State_LGA_Name. |
+| Metrics | F1_score for evaluating our algorithm.|
+| ML Task | Binary Classification task.|
+
+
+## Problems
+
+1. The dataset was unbalanced.
+2. It had missing values in some columns.
+3. `Age` column had outliers.
+4. Despite distinct IDs duplicated rows existed.
+5. State and LGA column names were incorrect.
+6. Some duplicated rows had different target.
+
+## Solved
+
+1. Used resampling algorithm to oversample the minority target rows.
+2. I tried to impute NaNs with Iterative-Imputer and KNN-Imputer.
+3. I used absolute value of Age to fix negative values.
+4. When I deleted duplicated values I got lower F1_score in public LB so I did not fix it. But in private LB I found out I should have deleted it.
+5. Interestingly I used Nigerian_State_LGA_Name dataset to correct Names in LGA and State.
+6. I again did not fix duplicated rows with different targets.
+
+
+## Solved
+
+1. Used resampling algorithm to oversample the minority target rows.
+2. I tried to impute NaNs with Iterative-Imputer and KNN-Imputer.
+3. I used absolute value of Age to fix negative values.
+4. When I deleted duplvate LB I found out I should have deleted it.
+5. Interestingly I used Nigerian_State_LGA_Name dataset to correct Names in LGA and State.
+6. I again did not fix duplicated rows with different targets.
+
+
+
+
+
 
 <br/>
 
